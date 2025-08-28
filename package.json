@@ -1,0 +1,7 @@
+{
+  "name": "gamehub",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "static-server -p 3000 || python3 -m http.server 3000"
+  }
+}
