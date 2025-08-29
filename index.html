@@ -1,34 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>GameHub — Mini Games Collection</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameHub</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="app">
-    <header class="header">
-      <h1>GameHub</h1>
-      <p class="tag">Let's play Retro Games</p>
-    </header>
+  <header>
+    <h1>🎮 GameHub</h1>
+    <p>Select a game and start playing!</p>
+  </header>
 
-    <main>
-      <section class="grid" id="gamesGrid"></section>
-    </main>
-
-    <footer>
-      <small>Made with ❤️ C++ + WebAssembly friendly</small>
-    </footer>
-  </div>
-
-  <div id="modal" class="modal hidden">
-    <div class="modal-inner">
-      <button id="closeBtn" class="close">✕</button>
-      <div id="gameContainer" class="game-container"></div>
+  <main class="game-grid">
+    <div class="game-card" data-game="tictactoe">
+      <div class="game-icon">❌⭕</div>
+      <h2>Tic Tac Toe</h2>
+      <button>Play</button>
     </div>
-  </div>
+    <div class="game-card" data-game="snake">
+      <div class="game-icon">🐍</div>
+      <h2>Snake</h2>
+      <button>Play</button>
+    </div>
+    <div class="game-card" data-game="pong">
+      <div class="game-icon">🏓</div>
+      <h2>Pong</h2>
+      <button>Play</button>
+    </div>
+    <div class="game-card" data-game="memory">
+      <div class="game-icon">🃏</div>
+      <h2>Memory</h2>
+      <button>Play</button>
+    </div>
+    <div class="game-card" data-game="minesweeper">
+      <div class="game-icon">💣</div>
+      <h2>Minesweeper</h2>
+      <button>Play</button>
+    </div>
+    <div class="game-card" data-game="breakout">
+      <div class="game-icon">🧱</div>
+      <h2>Breakout</h2>
+      <button>Play</button>
+    </div>
+    <div class="game-card" data-game="2048">
+      <div class="game-icon">🔢</div>
+      <h2>2048</h2>
+      <button>Play</button>
+    </div>
+    <div class="game-card" data-game="connect4">
+      <div class="game-icon">🔴🟡</div>
+      <h2>Connect 4</h2>
+      <button>Play</button>
+    </div>
+    <div class="game-card" data-game="rps">
+      <div class="game-icon">✊✋✌️</div>
+      <h2>Rock Paper Scissors</h2>
+      <button>Play</button>
+    </div>
+    <div class="game-card" data-game="simon">
+      <div class="game-icon">🎵</div>
+      <h2>Simon Says</h2>
+      <button>Play</button>
+    </div>
+  </main>
 
-  <script type="module" src="app.js"></script>
+  <section id="game-container" class="hidden">
+    <button id="back-button">← Back to Hub</button>
+    <div id="game-root"></div>
+  </section>
+
+  <script src="app.js"></script>
 </body>
 </html>
